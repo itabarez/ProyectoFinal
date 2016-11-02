@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a1459abf62f74801a3bb66b0e3a83e60" Name="Diagram1">
+        <EntityTypeShape EntityType="Consultorios_TestingModel.Consulta" Width="1.5" PointX="5.25" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorios_TestingModel.Consultorio" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorios_TestingModel.Edificio" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorios_TestingModel.Especialidad" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorios_TestingModel.Estado_Civil" Width="1.5" PointX="5.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorios_TestingModel.Medico" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorios_TestingModel.Paciente" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorios_TestingModel.Persona" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorios_TestingModel.Rol" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorios_TestingModel.Usuario" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="Consultorios_TestingModel.FK_ConsultaConsultorio" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorios_TestingModel.FK_ConsultaEspecialidad" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorios_TestingModel.FK_ConsultaMedico" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorios_TestingModel.FK_ConsultorioEspecialidad" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorios_TestingModel.FK_EdificioConsultorio" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorios_TestingModel.PK_MedicoEspecialidad" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorios_TestingModel.FK_PacienteEstado" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorios_TestingModel.FK_UsuarioPersona" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

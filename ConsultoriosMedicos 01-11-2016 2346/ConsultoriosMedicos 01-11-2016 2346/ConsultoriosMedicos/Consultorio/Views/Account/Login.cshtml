@@ -1,0 +1,253 @@
+﻿@model Consultorio.Models.LoginModel
+
+@{
+    ViewBag.Title = "Iniciar sesión";
+}
+
+<!--<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+</hgroup>-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin - Bootstrap Admin Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <form id="form1">
+        <!--<section id="loginForm">-->
+
+            @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+
+                <!--<fieldset>-->
+
+                    <!--<legend>Formulario de inicio de sesión</legend>-->
+                    <div id="wrapper" style="text-align:center">
+                        <!-- Navigation -->
+                        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="index.html">Sistema de Consultorios Médicos</a>
+                            </div>
+                            <!-- Top Menu Items -->
+                            <ul class="nav navbar-right top-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
+                                    <ul class="dropdown-menu message-dropdown">
+                                        <li class="message-preview">
+                                            <a href="#">
+                                                <div class="media">
+                                                    <span class="pull-left">
+                                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                                    </span>
+                                                    <div class="media-body">
+                                                        <h5 class="media-heading">
+                                                            <strong>
+                                                                <asp:label id="LblUsuarioLogueado" text="Usuario"></asp:label>John Smith
+                                                            </strong>
+                                                        </h5>
+                                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="message-preview">
+                                            <a href="#">
+                                                <div class="media">
+                                                    <span class="pull-left">
+                                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                                    </span>
+                                                    <div class="media-body">
+                                                        <h5 class="media-heading">
+                                                            <strong><asp:label id="LblLoginUsuario" text="Usuario"></asp:label></strong>
+                                                        </h5>
+                                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="message-preview">
+                                            <a href="#">
+                                                <div class="media">
+                                                    <span class="pull-left">
+                                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                                    </span>
+                                                    <div class="media-body">
+                                                        <h5 class="media-heading">
+                                                            <strong><asp:label id="LblUser" text="Usuario"></asp:label></strong>
+                                                        </h5>
+                                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="message-footer">
+                                            <a href="#">Read All New Messages</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+                                    <ul class="dropdown-menu alert-dropdown">
+                                        <li>
+                                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a href="#">View All</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-user"></i>
+                                        <asp:label id="LblUsuarioLog" text="Usuario"></asp:label> <b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div id="page-wrapper" style="text-align:center">
+
+                            <div class="container-fluid">
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h1 class="page-header">
+                                            Login de Usuario
+                                        </h1>
+                                        <ol class="breadcrumb" style="text-align:center">
+                                            <li class="active" style="text-align:center">
+                                                <!--<ol>-->
+                                                <!--<li>-->
+                                                @Html.LabelFor(m => m.UserName)
+                                                @Html.TextBoxFor(m => m.UserName, "Ingrese Usuario", new { @class = "form-control", @style = "Width:200px; text-align:left" })
+                                                @Html.ValidationMessageFor(m => m.UserName)
+                                                <!--</li>-->
+                                                <!--<li>-->
+                                                @Html.LabelFor(m => m.Password)
+                                                @Html.PasswordFor(m => m.Password, new { @class = "form-control", @style = "Width:200px; text-align:left", @title = "Ingrese su contraseña" })
+                                                @Html.ValidationMessageFor(m => m.Password)
+                                                <!--</li>-->
+                                                <!--<li>-->
+                                                @Html.CheckBoxFor(m => m.RememberMe)
+                                                @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+                                                <!--</li>-->
+                                                <!--</ol>-->
+                                                <input type="submit" value="I N G R E S A R" class="glyphicon glyphicon-ok" />
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="alert alert-info alert-dismissable">
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                            <i class="fa fa-info-circle"></i>  <strong>Por consultas sobre el sistema</strong> Comuniquese <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">con el equipo de soporte</a> 098 123 456
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+                            </div>
+                            <!-- /.container-fluid -->
+
+                        </div>
+                        <!-- /#page-wrapper -->
+
+                    </div>
+                    <!-- /#wrapper -->
+                    <!-- jQuery -->
+                    <script src="js/jquery.js"></script>
+
+                    <!-- Bootstrap Core JavaScript -->
+                    <script src="js/bootstrap.min.js"></script>
+
+                    <!-- Morris Charts JavaScript -->
+                    <script src="js/plugins/morris/raphael.min.js"></script>
+                    <script src="js/plugins/morris/morris.min.js"></script>
+                    <script src="js/plugins/morris/morris-data.js"></script>
+                <!--</fieldset>-->
+            }
+        <!--</section>
+
+        <!--<section class="social" id="socialLoginForm">
+            <h2>Usar otro servicio para iniciar sesión.</h2>
+            @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+        </section>-->
+
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }
+    </form>
+</body>
+</html>
